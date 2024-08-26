@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: go-docker-deployment
+  name: goapp
   labels:
-    app: go-docker
+    app: goapp
 spec:
   replicas: 1  # Number of replicas
   selector:
     matchLabels:
-      app: go-docker
+      app: goapp
   template:
     metadata:
       labels:
-        app: go-docker
+        app: goapp
     spec:
       containers:
-      - name: go-docker-container
-        image: justynroberts/go-app:latest  # Replace with your Docker Hub username and image tag
+      - name: goapp
+        image: hiteshreeruparell/demo:goapp  # Replace with your Docker Hub username and image tag
         ports:
         - containerPort: 8080  # Port your Go application listens on
         env:
