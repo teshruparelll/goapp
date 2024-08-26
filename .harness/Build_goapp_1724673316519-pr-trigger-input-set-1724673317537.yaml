@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_goapp_1724673316519-pr-trigger-input-set
+  identifier: Build_goapp_1724673316519prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Example
+  pipeline:
+    identifier: Build_goapp_1724673316519
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
