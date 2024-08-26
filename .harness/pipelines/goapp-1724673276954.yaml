@@ -73,14 +73,6 @@ pipeline:
           deploymentType: Kubernetes
           service:
             serviceRef: goapp
-            serviceInputs:
-              serviceDefinition:
-                type: Kubernetes
-                spec:
-                  artifacts:
-                    primary:
-                      primaryArtifactRef: <+input>
-                      sources: <+input>
           environment:
             environmentRef: harnessdevenv
             deployToAll: false
